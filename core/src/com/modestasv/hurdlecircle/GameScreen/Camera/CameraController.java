@@ -1,4 +1,4 @@
-package com.mv.desktop.hurdlecircle.GameScreen.Camera;
+package com.modestasv.hurdlecircle.GameScreen.Camera;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
@@ -17,7 +17,7 @@ import com.modestasv.hurdlecircle.Assets;
 public class CameraController {
 
 
-    public StateMachine<CameraController> stateMachine = new DefaultStateMachine<CameraController>(this, CameraState.INITIALIZE);
+    public StateMachine<CameraController, CameraState> stateMachine = new DefaultStateMachine<CameraController, CameraState>(this, CameraState.INITIALIZE);
     public OrthographicCamera camera;
 
     public MVInterpolate zoomInterpolationInit = new MVInterpolate(new Interpolation.Exp(4,3), 0.7f, 4f, 1f);

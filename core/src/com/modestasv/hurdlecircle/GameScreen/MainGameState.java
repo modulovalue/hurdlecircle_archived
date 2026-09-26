@@ -1,11 +1,11 @@
-package com.mv.desktop.hurdlecircle.GameScreen;
+package com.modestasv.hurdlecircle.GameScreen;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.ai.fsm.State;
 import com.badlogic.gdx.ai.msg.Telegram;
-import com.mv.desktop.hurdlecircle.GameScreen.Camera.CameraState;
+import com.modestasv.hurdlecircle.GameScreen.Camera.CameraState;
 import com.modestasv.hurdlecircle.Assets;
-import com.mv.desktop.hurdlecircle.GameScreen.ScreenObjects.Spieler.SpielerState;
+import com.modestasv.hurdlecircle.GameScreen.ScreenObjects.Spieler.SpielerState;
 
 /**
  *  PLAYING:

@@ -1,4 +1,4 @@
-package com.mv.desktop.hurdlecircle.GameScreen.ScreenObjects.Spieler;
+package com.modestasv.hurdlecircle.GameScreen.ScreenObjects.Spieler;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.math.MathUtils;

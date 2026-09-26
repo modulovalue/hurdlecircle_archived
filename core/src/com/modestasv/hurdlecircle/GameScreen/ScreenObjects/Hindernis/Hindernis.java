@@ -1,4 +1,4 @@
-package com.mv.desktop.hurdlecircle.GameScreen.ScreenObjects.Hindernis;
+package com.modestasv.hurdlecircle.GameScreen.ScreenObjects.Hindernis;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.ai.fsm.DefaultStateMachine;
@@ -7,7 +7,7 @@ import com.badlogic.gdx.graphics.g2d.ParticleEffect;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
-import com.mv.desktop.hurdlecircle.GameScreen.Behaviour.Rotate;
+import com.modestasv.hurdlecircle.GameScreen.Behaviour.Rotate;
 import com.modestasv.hurdlecircle.GameScreen.ScreenObjects.ObjektAbstr;
 import com.modestasv.hurdlecircle.Assets;
 
@@ -17,7 +17,7 @@ import com.modestasv.hurdlecircle.Assets;
  */
 public class Hindernis extends ObjektAbstr {
 
-    public StateMachine<Hindernis> stateMachine;
+    public StateMachine<Hindernis, HindernisState> stateMachine;
     public float randomNumber;
     public Rotate rotate;
     private ParticleEffect effect = new ParticleEffect();;
@@ -27,7 +27,7 @@ public class Hindernis extends ObjektAbstr {
     public Hindernis(Vector2 pos, String path, float groesse, HindernisState startingState) {
         super(Vector2.Zero, pos, path, groesse);
         rotate = new Rotate(this);
-        stateMachine = new DefaultStateMachine<Hindernis>(this, startingState);
+        stateMachine = new DefaultStateMachine<Hindernis, HindernisState>(this, startingState);
         stateMachine.update();
         randomNumber = MathUtils.random(0f,3f);
         if(startingState == HindernisState.QUESTIONMARK) {
@@ -69,7 +69,7 @@ public class Hindernis extends ObjektAbstr {
             effect.setPosition(getPos().x, getPos().y);
             effect.draw(batch, Gdx.graphics.getDeltaTime());
             if(shouldStartScaleEffect) {
-                if(effect.getEmitters().get(0).getScale().getHighMax() > 2500) {
+                if(effect.getEmitters().get(0).getXScale().getHighMax() > 2500) {
                     shouldDrawEffect = false;
                     return;
                 }

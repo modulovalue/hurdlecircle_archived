@@ -1,4 +1,4 @@
-package com.mv.desktop.hurdlecircle.GameScreen;
+package com.modestasv.hurdlecircle.GameScreen;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.ParticleEffect;

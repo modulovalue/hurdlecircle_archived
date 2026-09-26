@@ -1,4 +1,4 @@
-package com.mv.desktop.hurdlecircle;
+package com.modestasv.hurdlecircle;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Preferences;
@@ -6,7 +6,7 @@ import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.assets.loaders.TextureLoader;
 import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.Texture;
-import com.mv.desktop.hurdlecircle.GameScreen.MVSound;
+import com.modestasv.hurdlecircle.GameScreen.MVSound;
 
 import java.util.Locale;
 

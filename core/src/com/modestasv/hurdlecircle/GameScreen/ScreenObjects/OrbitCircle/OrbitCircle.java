@@ -1,11 +1,11 @@
-package com.mv.desktop.hurdlecircle.GameScreen.ScreenObjects.OrbitCircle;
+package com.modestasv.hurdlecircle.GameScreen.ScreenObjects.OrbitCircle;
 
 import com.badlogic.gdx.ai.fsm.DefaultStateMachine;
 import com.badlogic.gdx.ai.fsm.State;
 import com.badlogic.gdx.ai.fsm.StateMachine;
 import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.math.Vector2;
-import com.mv.desktop.hurdlecircle.GameScreen.ScreenObjects.Hindernis.HindernisState;
+import com.modestasv.hurdlecircle.GameScreen.ScreenObjects.Hindernis.HindernisState;
 import com.modestasv.hurdlecircle.GameScreen.ScreenObjects.ObjektAbstr;
 import com.modestasv.hurdlecircle.MVInterpolate;
 import com.modestasv.hurdlecircle.Assets;
@@ -15,12 +15,12 @@ import com.modestasv.hurdlecircle.Assets;
  */
 public class OrbitCircle extends ObjektAbstr {
 
-    public StateMachine<OrbitCircle> stateMachine;
+    public StateMachine<OrbitCircle, OrbitState> stateMachine;
     private MVInterpolate interpolate = new MVInterpolate(Interpolation.linear, 4.5f, 0, 1);
 
     public OrbitCircle(float groesse) {
         super(Vector2.Zero,Vector2.Zero, Assets.ORBIT_NORMAL, groesse);
-        stateMachine = new DefaultStateMachine<OrbitCircle>(this, OrbitState.NORMAL);
+        stateMachine = new DefaultStateMachine<OrbitCircle, OrbitState>(this, OrbitState.NORMAL);
         interpolate.setDone();
     }
 

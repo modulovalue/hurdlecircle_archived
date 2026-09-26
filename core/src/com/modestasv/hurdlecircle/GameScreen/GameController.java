@@ -1,13 +1,13 @@
-package com.mv.desktop.hurdlecircle.GameScreen;
+package com.modestasv.hurdlecircle.GameScreen;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
-import com.mv.desktop.hurdlecircle.GameScreen.ScreenObjects.Hindernis.Hindernis;
-import com.mv.desktop.hurdlecircle.GameScreen.ScreenObjects.Hindernis.HindernisState;
-import com.mv.desktop.hurdlecircle.GameScreen.ScreenObjects.Spieler.Spieler;
-import com.mv.desktop.hurdlecircle.GameScreen.ScreenObjects.Spieler.SpielerState;
+import com.modestasv.hurdlecircle.GameScreen.ScreenObjects.Hindernis.Hindernis;
+import com.modestasv.hurdlecircle.GameScreen.ScreenObjects.Hindernis.HindernisState;
+import com.modestasv.hurdlecircle.GameScreen.ScreenObjects.Spieler.Spieler;
+import com.modestasv.hurdlecircle.GameScreen.ScreenObjects.Spieler.SpielerState;
 
 import java.util.ArrayList;
 

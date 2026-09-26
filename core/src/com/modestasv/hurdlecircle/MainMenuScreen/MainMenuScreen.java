@@ -1,4 +1,4 @@
-package com.mv.desktop.hurdlecircle.MainMenuScreen;
+package com.modestasv.hurdlecircle.MainMenuScreen;
 
 
 import com.badlogic.gdx.Gdx;
@@ -21,12 +21,12 @@ import com.badlogic.gdx.scenes.scene2d.ui.Container;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
-import com.badlogic.gdx.scenes.scene2d.utils.Align;
+import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.viewport.FitViewport;
-import com.mv.desktop.hurdlecircle.Game;
-import com.mv.desktop.hurdlecircle.GameScreen.ScreenObjects.ObjektAbstr;
-import com.mv.desktop.hurdlecircle.Assets;
+import com.modestasv.hurdlecircle.Game;
+import com.modestasv.hurdlecircle.GameScreen.ScreenObjects.ObjektAbstr;
+import com.modestasv.hurdlecircle.Assets;
 import com.modestasv.hurdlecircle.MVInterpolate;
 
 import java.security.Key;
@@ -69,7 +69,7 @@ public class MainMenuScreen implements Screen {
 
 
     public MainMenuScreen(final Game game) {
-        Gdx.input.setCatchBackKey(true);
+        Gdx.input.setCatchKey(com.badlogic.gdx.Input.Keys.BACK, true);
         this.game = game;
         stage = new Stage(new FitViewport(Assets.getWidth(), Assets.getHeight()));
         Texture fontTexture = new Texture(Gdx.files.internal("dotty/dotty.png"), true);

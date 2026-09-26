@@ -1,4 +1,4 @@
-package com.mv.desktop.hurdlecircle.Interfaces;
+package com.modestasv.hurdlecircle.Interfaces;
 
 /**
  * Wird benötigt um den Näherungssensor des Android Gerätes auszulesen

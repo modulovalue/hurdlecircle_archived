@@ -1,4 +1,4 @@
-package com.mv.desktop.hurdlecircle.GameScreen.ScreenObjects.Hindernis;
+package com.modestasv.hurdlecircle.GameScreen.ScreenObjects.Hindernis;
 
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;

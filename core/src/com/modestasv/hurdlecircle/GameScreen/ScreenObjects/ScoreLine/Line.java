@@ -1,4 +1,4 @@
-package com.mv.desktop.hurdlecircle.GameScreen.ScreenObjects.ScoreLine;
+package com.modestasv.hurdlecircle.GameScreen.ScreenObjects.ScoreLine;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;

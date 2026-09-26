@@ -1,46 +1,25 @@
-apply plugin: "java"
+apply plugin: 'application'
 
-sourceCompatibility = 1.6
-sourceSets.main.java.srcDirs = [ "src/" ]
+sourceSets.main.java.srcDirs = [ 'src/' ]
+sourceSets.main.resources.srcDirs = [ '../android/assets' ]
 
-project.ext.mainClassName = "com.modestasv.hurdlecircle.desktop.DesktopLauncher"
-project.ext.assetsDir = new File("../android/assets");
-
-task run(dependsOn: classes, type: JavaExec) {
-    main = project.mainClassName
-    classpath = sourceSets.main.runtimeClasspath
-    standardInput = System.in
-    workingDir = project.assetsDir
-    ignoreExitValue = true
+application {
+    mainClass = 'com.modestasv.hurdlecircle.desktop.DesktopLauncher'
 }
 
-task dist(type: Jar) {
-    from files(sourceSets.main.output.classesDir)
-    from files(sourceSets.main.output.resourcesDir)
-    from {configurations.compile.collect {zipTree(it)}}
-    from files(project.assetsDir);
- 
-    manifest {
-        attributes 'Main-Class': project.mainClassName
+tasks.named('run') {
+    workingDir = file('../android/assets')
+    // GLFW needs the main thread on macOS.
+    if (System.getProperty('os.name').toLowerCase().contains('mac')) {
+        jvmArgs '-XstartOnFirstThread'
     }
 }
 
-dist.dependsOn classes
-
-//eclipse {
-//    project {
-//        name = appName + "-desktop"
-//        linkedResource name: 'assets', type: '2', location: 'PARENT-1-PROJECT_LOC/android/assets'
-//    }
-//}
-//
-//task afterEclipseImport(description: "Post processing after project generation", group: "IDE") {
-//  doLast {
-//    def classpath = new XmlParser().parse(file(".classpath"))
-//    new Node(classpath, "classpathentry", [ kind: 'src', path: 'assets' ]);
-//    def writer = new FileWriter(file(".classpath"))
-//    def printer = new XmlNodePrinter(new PrintWriter(writer))
-//    printer.setPreserveWhitespace(true)
-//    printer.print(classpath)
-//  }
-//}
+tasks.register('dist', Jar) {
+    archiveFileName = 'HurdleCircle.jar'
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    manifest { attributes 'Main-Class': application.mainClass }
+    dependsOn configurations.runtimeClasspath
+    from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}

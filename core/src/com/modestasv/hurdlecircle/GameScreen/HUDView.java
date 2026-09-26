@@ -1,4 +1,4 @@
-package com.mv.desktop.hurdlecircle.GameScreen;
+package com.modestasv.hurdlecircle.GameScreen;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
@@ -14,7 +14,7 @@ import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.Touchable;
 import com.badlogic.gdx.scenes.scene2d.ui.Container;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
-import com.badlogic.gdx.scenes.scene2d.utils.Align;
+import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.modestasv.hurdlecircle.GameScreen.ScreenObjects.ObjektAbstr;
 import com.modestasv.hurdlecircle.Assets;

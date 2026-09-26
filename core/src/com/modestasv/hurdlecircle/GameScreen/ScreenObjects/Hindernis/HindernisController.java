@@ -1,4 +1,4 @@
-package com.mv.desktop.hurdlecircle.GameScreen.ScreenObjects.Hindernis;
+package com.modestasv.hurdlecircle.GameScreen.ScreenObjects.Hindernis;
 
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;

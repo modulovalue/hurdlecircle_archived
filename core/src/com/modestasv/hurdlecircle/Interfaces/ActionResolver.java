@@ -1,4 +1,4 @@
-package com.mv.desktop.hurdlecircle.Interfaces;
+package com.modestasv.hurdlecircle.Interfaces;
 
 /**
  * Created by Modestas Valauskas on 20.03.2015.

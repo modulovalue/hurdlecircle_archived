@@ -1,4 +1,4 @@
-package com.mv.desktop.hurdlecircle.GameScreen.ScreenObjects.Spieler;
+package com.modestasv.hurdlecircle.GameScreen.ScreenObjects.Spieler;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.ai.fsm.DefaultStateMachine;
@@ -50,7 +50,7 @@ import com.modestasv.hurdlecircle.GameScreen.ScreenObjects.ObjektAbstr;
 
 public class Spieler extends ObjektAbstr {
 
-    public StateMachine<Spieler> stateMachine;
+    public StateMachine<Spieler, SpielerState> stateMachine;
     private Hindernis nearestHindernis;
     public boolean uhrzeigersinn;
     public Vector2 proj;
@@ -63,7 +63,7 @@ public class Spieler extends ObjektAbstr {
 
     public Spieler(Vector2 vel, Vector2 pos, String path, float groesse) {
         super(vel, pos, path, groesse);
-        stateMachine = new DefaultStateMachine<Spieler> (this, SpielerState.NOTHANG);
+        stateMachine = new DefaultStateMachine<Spieler, SpielerState> (this, SpielerState.NOTHANG);
     }
 
     public void update(float delta, boolean trueTouchingDown, boolean gameOver) {

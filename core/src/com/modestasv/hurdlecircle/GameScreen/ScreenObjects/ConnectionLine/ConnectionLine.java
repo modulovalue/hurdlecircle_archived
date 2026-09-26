@@ -1,4 +1,6 @@
-package com.mv.desktop.hurdlecircle.GameScreen.ScreenObjects.ConnectionLine;
+package com.modestasv.hurdlecircle.GameScreen.ScreenObjects.ConnectionLine;
+
+import com.badlogic.gdx.graphics.g2d.ParticleEmitter;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -31,11 +33,13 @@ public class ConnectionLine {
 
         float pScale = 3f;
 
-        float scaling = effect.getEmitters().get(0).getScale().getHighMax();
-        effect.getEmitters().get(0).getScale().setHigh(scaling * pScale);
-
-        scaling = effect.getEmitters().get(0).getScale().getLowMax();
-        effect.getEmitters().get(0).getScale().setLow(scaling * pScale);
+        float scaling;
+        // Particle scale is split into X and Y since libGDX 1.9.
+        for (ParticleEmitter.ScaledNumericValue scale : new ParticleEmitter.ScaledNumericValue[] {
+                effect.getEmitters().get(0).getXScale(), effect.getEmitters().get(0).getYScale() }) {
+            scale.setHigh(scale.getHighMax() * pScale);
+            scale.setLow(scale.getLowMax() * pScale);
+        }
 
         scaling = effect.getEmitters().get(0).getVelocity().getHighMax();
         effect.getEmitters().get(0).getVelocity().setHigh(scaling * pScale);

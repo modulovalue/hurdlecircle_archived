@@ -1,4 +1,4 @@
-package com.mv.desktop.hurdlecircle.GameScreen;
+package com.modestasv.hurdlecircle.GameScreen;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputMultiplexer;
@@ -10,19 +10,19 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.scenes.scene2d.actions.Actions;
-import com.mv.desktop.hurdlecircle.Game;
-import com.mv.desktop.hurdlecircle.GameScreen.Camera.CameraController;
-import com.mv.desktop.hurdlecircle.GameScreen.Camera.CameraState;
-import com.mv.desktop.hurdlecircle.GameScreen.ScreenObjects.ConnectionLine.ConnectionLine;
-import com.mv.desktop.hurdlecircle.GameScreen.ScreenObjects.Hindernis.Hindernis;
-import com.mv.desktop.hurdlecircle.GameScreen.ScreenObjects.Hindernis.HindernisController;
-import com.mv.desktop.hurdlecircle.GameScreen.ScreenObjects.Hindernis.HindernisState;
-import com.mv.desktop.hurdlecircle.GameScreen.ScreenObjects.ObjektAbstr;
-import com.mv.desktop.hurdlecircle.GameScreen.ScreenObjects.OrbitCircle.OrbitCircle;
-import com.mv.desktop.hurdlecircle.GameScreen.ScreenObjects.ScoreLine.Line;
-import com.mv.desktop.hurdlecircle.GameScreen.ScreenObjects.Spieler.Spieler;
-import com.mv.desktop.hurdlecircle.GameScreen.ScreenObjects.Wall.Wall;
-import com.mv.desktop.hurdlecircle.GameScreen.ScreenObjects.Wall.WallManager;
+import com.modestasv.hurdlecircle.Game;
+import com.modestasv.hurdlecircle.GameScreen.Camera.CameraController;
+import com.modestasv.hurdlecircle.GameScreen.Camera.CameraState;
+import com.modestasv.hurdlecircle.GameScreen.ScreenObjects.ConnectionLine.ConnectionLine;
+import com.modestasv.hurdlecircle.GameScreen.ScreenObjects.Hindernis.Hindernis;
+import com.modestasv.hurdlecircle.GameScreen.ScreenObjects.Hindernis.HindernisController;
+import com.modestasv.hurdlecircle.GameScreen.ScreenObjects.Hindernis.HindernisState;
+import com.modestasv.hurdlecircle.GameScreen.ScreenObjects.ObjektAbstr;
+import com.modestasv.hurdlecircle.GameScreen.ScreenObjects.OrbitCircle.OrbitCircle;
+import com.modestasv.hurdlecircle.GameScreen.ScreenObjects.ScoreLine.Line;
+import com.modestasv.hurdlecircle.GameScreen.ScreenObjects.Spieler.Spieler;
+import com.modestasv.hurdlecircle.GameScreen.ScreenObjects.Wall.Wall;
+import com.modestasv.hurdlecircle.GameScreen.ScreenObjects.Wall.WallManager;
 import com.modestasv.hurdlecircle.Assets;
 import com.modestasv.hurdlecircle.MVInterpolate;
 import com.modestasv.hurdlecircle.MainMenuScreen.MainMenuScreen;
@@ -54,7 +54,7 @@ public class GameModel implements Screen {
     public float leftBound;
     public float rightBound;
 
-    public StateMachine<GameModel> stateMachine = new DefaultStateMachine<GameModel>(this, MainGameState.PLAYING);
+    public StateMachine<GameModel, MainGameState> stateMachine = new DefaultStateMachine<GameModel, MainGameState>(this, MainGameState.PLAYING);
 
     public GameModel(Game game) {
         this.game = game;

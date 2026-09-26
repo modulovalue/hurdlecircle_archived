@@ -1,4 +1,4 @@
-package com.mv.desktop.hurdlecircle.SplashScreen;
+package com.modestasv.hurdlecircle.SplashScreen;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
@@ -6,9 +6,9 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
-import com.badlogic.gdx.scenes.scene2d.utils.Align;
-import com.mv.desktop.hurdlecircle.Game;
-import com.mv.desktop.hurdlecircle.Assets;
+import com.badlogic.gdx.utils.Align;
+import com.modestasv.hurdlecircle.Game;
+import com.modestasv.hurdlecircle.Assets;
 
 import static com.badlogic.gdx.math.Interpolation.*;
 import static com.badlogic.gdx.scenes.scene2d.actions.Actions.*;

@@ -1,4 +1,4 @@
-package com.mv.desktop.hurdlecircle;
+package com.modestasv.hurdlecircle;
 
 import com.badlogic.gdx.graphics.glutils.ShaderProgram;
 

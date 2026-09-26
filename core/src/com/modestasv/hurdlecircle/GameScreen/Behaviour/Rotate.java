@@ -1,4 +1,4 @@
-package com.mv.desktop.hurdlecircle.GameScreen.Behaviour;
+package com.modestasv.hurdlecircle.GameScreen.Behaviour;
 
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;

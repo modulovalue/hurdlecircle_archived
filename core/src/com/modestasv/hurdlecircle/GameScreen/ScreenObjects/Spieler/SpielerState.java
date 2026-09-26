@@ -1,5 +1,5 @@
 
-package com.mv.desktop.hurdlecircle.GameScreen.ScreenObjects.Spieler;
+package com.modestasv.hurdlecircle.GameScreen.ScreenObjects.Spieler;
 
 import com.badlogic.gdx.ai.fsm.State;
 import com.badlogic.gdx.ai.msg.Telegram;

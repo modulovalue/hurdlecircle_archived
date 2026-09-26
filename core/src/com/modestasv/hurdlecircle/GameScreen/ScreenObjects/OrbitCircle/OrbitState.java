@@ -1,4 +1,4 @@
-package com.mv.desktop.hurdlecircle.GameScreen.ScreenObjects.OrbitCircle;
+package com.modestasv.hurdlecircle.GameScreen.ScreenObjects.OrbitCircle;
 
 import com.badlogic.gdx.ai.fsm.State;
 import com.badlogic.gdx.ai.msg.Telegram;

@@ -1,4 +1,4 @@
-package com.mv.desktop.hurdlecircle.GameScreen.Camera;
+package com.modestasv.hurdlecircle.GameScreen.Camera;
 
 import com.badlogic.gdx.ai.fsm.State;
 import com.badlogic.gdx.ai.msg.Telegram;

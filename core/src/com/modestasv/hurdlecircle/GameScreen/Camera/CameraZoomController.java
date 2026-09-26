@@ -1,4 +1,4 @@
-package com.mv.desktop.hurdlecircle.GameScreen.Camera;
+package com.modestasv.hurdlecircle.GameScreen.Camera;
 
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.math.Interpolation;
